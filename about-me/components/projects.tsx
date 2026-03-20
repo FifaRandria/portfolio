@@ -1,0 +1,114 @@
+"use client";
+
+import { Github, Globe } from "lucide-react";
+import { Carousel } from "./carousel";
+
+const projects = [
+  {
+    title: "E-commerce Platform",
+    description: "Full-featured online store with cart, payments, and admin dashboard.",
+    tags: ["Next.js", "Stripe", "PostgreSQL"],
+    images: ["/fifa1.jpg"],
+    github: "https://github.com/yourusername",
+    live: "https://example.com",
+  },
+  {
+    title: "Task Management App",
+    description: "Real-time collaborative task manager with team features and notifications.",
+    tags: ["React", "Socket.io", "MongoDB"],
+    images: ["/fifa1.jpg", "/fifrandr.jpg"],
+    github: "https://github.com/yourusername",
+    live: "https://example.com",
+  },
+  {
+    title: "Portfolio CMS",
+    description: "Headless CMS for managing portfolios with markdown support.",
+    tags: ["Next.js", "Sanity", "Vercel"],
+    images: ["/fifa1.jpg", "/fifrandr.jpg"],
+    github: "https://github.com/yourusername",
+    live: "https://example.com",
+  },
+  {
+    title: "Weather Dashboard",
+    description: "Beautiful weather app with location-based forecasts and real-time updates.",
+    tags: ["React", "OpenWeather"],
+    images: ["/fifa1.jpg", "/fifrandr.jpg"],
+    github: "https://github.com/yourusername",
+    live: "https://example.com",
+  },
+];
+
+export function Projects() {
+  return (
+    <section id="projects" className="py-32 px-6 relative">
+      <div className="fixed inset-0 -z-20 pointer-events-none backdrop-blur-[2px]">
+        <div className="absolute top-10 right-1/4 w-32 h-32 border border-indigo-500/20 rotate-12" />
+        <div className="absolute top-30 left-10 w-24 h-24 border border-purple-500/15 rotate-45" />
+        <div className="absolute bottom-20 right-10 w-40 h-40 border border-indigo-500/10 -rotate-6" />
+        <div className="absolute bottom-40 left-1/3 w-28 h-28 border border-purple-500/20 rotate-6" />
+        <div className="absolute top-1/4 right-10 w-16 h-16 bg-indigo-500/5 rounded-full" />
+        <div className="absolute bottom-1/3 left-20 w-20 h-20 bg-purple-500/5 rounded-full" />
+        <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-indigo-500/40 rounded-full" />
+        <div className="absolute bottom-1/4 left-1/4 w-3 h-3 bg-purple-500/30 rotate-45" />
+        <div className="absolute top-2/3 right-1/3 w-1 h-1 bg-indigo-500/50" />
+        <div className="absolute top-1/3 left-1/2 w-2 h-2 bg-purple-500/40" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
+        <h2 className="text-3xl font-bold text-white mb-10">
+          Quelques-unes de  <span className="text-indigo-400">mes réalisations</span>
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="group bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden hover:border-indigo-500/50 transition-all backdrop-blur-sm"
+            >
+              <Carousel images={project.images} alt={project.title} />
+              
+              <div className="p-5">
+                <h3 className="text-base font-semibold text-white mb-2 group-hover:text-indigo-300 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-zinc-400 mb-4">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs px-2 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-zinc-500"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors"
+                  >
+                    <Github size={16} />
+                    GitHub
+                  </a>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors"
+                  >
+                    <Globe size={16} />
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
