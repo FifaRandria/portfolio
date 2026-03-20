@@ -34,7 +34,7 @@ export function About() {
           </div>
           <div className="space-y-4 text-zinc-400">
             <p className="text-lg leading-relaxed">
-              Passionné par le développement full-stack, je transforme des idées en applications web intuitives et efficaces.
+              Passionné par le développement web, je transforme des idées en applications web intuitives et efficaces.
             </p>
             <p className="text-lg leading-relaxed">
               Mon parcours a commencé par la curiosité pour le fonctionnement des choses sur le Web, et il a évolué vers une carrière dans la création de produits numériques.            </p>
