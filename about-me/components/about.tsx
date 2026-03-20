@@ -21,13 +21,13 @@ export function About() {
           À propos <span className="text-indigo-400">de moi</span>
         </h2>
 
-        <div className="grid md:grid-cols-[200px_1fr] gap-10 items-start">
-          <div className="aspect-square bg-zinc-800 rounded-2xl border border-zinc-700 hover:border-indigo-500/50 transition-colors overflow-hidden">
+        <div className="grid md:grid-cols-[150px_1fr] gap-8 items-start">
+          <div className="w-32 md:w-40 mx-auto md:mx-0 aspect-square bg-zinc-800 rounded-2xl border border-zinc-700 hover:border-indigo-500/50 transition-colors overflow-hidden">
             <Image
               src="/fifa1.jpg"
               alt="Profile photo"
-              width={250}
-              height={250}
+              width={160}
+              height={160}
               className="w-full h-full object-cover"
               unoptimized
             />

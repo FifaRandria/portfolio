@@ -5,37 +5,37 @@ import { Carousel } from "./carousel";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "Full-featured online store with cart, payments, and admin dashboard.",
-    tags: ["Next.js", "Stripe", "PostgreSQL"],
-    images: ["/fifa1.jpg"],
-    github: "https://github.com/yourusername",
-    live: "https://example.com",
+    title: "Sakafo malagasy",
+    description: "Un site interactif où les utilisateurs peuvent découvrir, sauvegarder et partager des recettes malgaches. L’idée est de combiner découverte culturelle et fonctionnalités pratiques pour la cuisine.",
+    tags: ["Django", "Sqlite3", "Python"],
+    images: ["/img/sakafo.PNG", "/img/sakafo1.PNG", "/img/sakafo2.PNG", "/img/sakafo3.PNG", "/img/sakafo4.PNG"],
+    github: "https://github.com/MizyJo/sakafoMalagasy.git",
+    live: "",
   },
   {
-    title: "Task Management App",
-    description: "Real-time collaborative task manager with team features and notifications.",
-    tags: ["React", "Socket.io", "MongoDB"],
-    images: ["/fifa1.jpg", "/fifrandr.jpg"],
-    github: "https://github.com/yourusername",
-    live: "https://example.com",
+    title: "Krohy",
+    description: "un espace collaboratif en ligne destiné à renforcer la visibilité et les interactions entre les enseignants-chercheurs malgaches. La plateforme permet aux utilisateurs de créer des profils, d’échanger via un système de messages privés et de participer à un petit forum de discussion pour partager idées.",
+    tags: ["Next", "Socket.io", "Sqlite", "Django", "tailwind", "JWT"],
+    images: ["/img/krohy.PNG", "/img/krohy1.PNG", "/img/krohy2.PNG", "/img/krohy3.PNG", "/img/krohy4.PNG"],
+    github: "https://github.com/FifaRandria/krohy_front.git",
+    live: "",
   },
   {
-    title: "Portfolio CMS",
-    description: "Headless CMS for managing portfolios with markdown support.",
-    tags: ["Next.js", "Sanity", "Vercel"],
-    images: ["/fifa1.jpg", "/fifrandr.jpg"],
-    github: "https://github.com/yourusername",
-    live: "https://example.com",
+    title: "victimes du photovoltaique",
+    description: "Depuis 2014 l’Association des Victimes du Photovoltaïque accompagne les personnes victimes des arnaques du photovoltaïque dans toutes leurs démarches L’Association des victimes du photovoltaïque vous aide également à préparer votre dossier pour faire reconnaître vos droits en justice ou auprès des organismes concernés.",
+    tags: ["Wordpress", "tampletaly"],
+    images: ["/img/wp.PNG", "/img/wp1.PNG", "/img/wp2.PNG", "/img/wp3.PNG"],
+    github: "",
+    live: "https://victimesduphotovoltaique.com/",
   },
-  {
-    title: "Weather Dashboard",
-    description: "Beautiful weather app with location-based forecasts and real-time updates.",
-    tags: ["React", "OpenWeather"],
-    images: ["/fifa1.jpg", "/fifrandr.jpg"],
-    github: "https://github.com/yourusername",
-    live: "https://example.com",
-  },
+  // {
+  //   title: "Weather Dashboard",
+  //   description: "Beautiful weather app with location-based forecasts and real-time updates.",
+  //   tags: ["React", "OpenWeather"],
+  //   images: ["/img/krohy3.PNG", "/img/krohy4.PNG"],
+  //   github: "https://github.com/yourusername",
+  //   live: "https://example.com",
+  // },
 ];
 
 export function Projects() {
@@ -59,7 +59,7 @@ export function Projects() {
           Quelques-unes de  <span className="text-indigo-400">mes réalisations</span>
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {projects.map((project) => (
             <div
               key={project.title}

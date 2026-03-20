@@ -4,10 +4,10 @@ import { useState } from "react";
 import { Send, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 
 const socialLinks = [
-  { label: "GitHub", href: "https://github.com/yourusername", icon: Github },
-  { label: "LinkedIn", href: "https://linkedin.com/in/yourusername", icon: Linkedin },
-  { label: "Email", href: "mailto:hello@example.com", icon: Mail },
-  { label: "WhatsApp", href: "https://wa.me/1234567890", icon: MessageCircle },
+  { label: "GitHub", href: "https://github.com/FifaRandria", icon: Github },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/fifaliana-randria-2b819027a/", icon: Linkedin },
+  { label: "Email", href: "mailto:fifarandria92@gmail.com", icon: Mail },
+  { label: "WhatsApp", href: "https://wa.me/+2613883790", icon: MessageCircle },
 ];
 
 export function Contact() {
@@ -19,7 +19,7 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      await fetch("https://formspree.io/f/myknvlyz", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -51,18 +51,13 @@ export function Contact() {
 
       <div className="max-w-4xl mx-auto text-center relative">
         <h2 className="text-3xl font-bold text-white mb-4">
-          Get in <span className="text-indigo-400">Touch</span>
+          contactez-<span className="text-indigo-400">moi </span>
         </h2>
         <p className="text-zinc-400 mb-12 max-w-md mx-auto">
-          {`I'm currently open to new opportunities. Whether you have a question or just want to say hi, feel free to reach out!`}
+          {`Je suis actuellement ouvert à de nouvelles opportunités. Que vous ayez une question ou que vous souhaitiez simplement dire bonjour, n'hésitez pas à me contacter !`}
         </p>
 
-        <a
-          href="mailto:hello@example.com"
-          className="inline-block px-8 py-4 bg-white text-zinc-900 rounded-full font-medium hover:bg-zinc-200 hover:scale-105 transition-all"
-        >
-          hello@example.com
-        </a>
+        
 
         <div className="flex items-center justify-center gap-6 mt-12">
           {socialLinks.map((link) => (
@@ -80,11 +75,11 @@ export function Contact() {
         </div>
 
         <div className="mt-12">
-          <h4 className="font-medium text-white mb-4">Or send a message</h4>
+          <h4 className="font-medium text-white mb-4">Ou envoyez un message</h4>
           {submitted ? (
             <div className="max-w-md mx-auto p-6 bg-zinc-900 border border-zinc-800 rounded-2xl">
-              <p className="text-lg font-medium text-white mb-2">Message sent!</p>
-              <p className="text-zinc-400">I&apos;ll get back to you soon.</p>
+              <p className="text-lg font-medium text-white mb-2">Message envoyé !</p>
+              <p className="text-zinc-400">Je vous répondrai bientôt.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4 text-left">
@@ -94,7 +89,7 @@ export function Contact() {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
-                placeholder="Name"
+                placeholder="Nom"
                 className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-xl text-white placeholder-zinc-500 focus:border-indigo-500 focus:outline-none transition-colors"
               />
               <input
@@ -121,7 +116,7 @@ export function Contact() {
                 className="w-full py-3 bg-indigo-500 text-white rounded-xl font-medium hover:bg-indigo-600 transition-colors flex items-center justify-center gap-2"
               >
                 <Send size={16} />
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? "Envoi..." : "Envoyer un message"}
               </button>
             </form>
           )}

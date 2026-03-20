@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name | Full-Stack Developer & Web Designer",
+  title: "Fifa Randria | Full-Stack Developer",
   description:
     "Full-Stack Developer specializing in React, Next.js, TypeScript. Building beautiful, performant web applications with modern technologies.",
   keywords: ["Full-Stack Developer", "React Developer", "Next.js", "TypeScript", "Web Developer", "Portfolio"],
