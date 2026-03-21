@@ -12,21 +12,12 @@ A Next.js 16 portfolio website using the App Router, React 19, Tailwind CSS 4, a
 
 ## Commands
 
-### Development
 ```bash
-npm run dev          # Start development server at http://localhost:3000
-npm run build        # Create optimized production build
-npm run start        # Start production server
-```
-
-### Code Quality
-```bash
-npm run lint         # Run ESLint with Next.js core-web-vitals rules
-```
-
-### Type Checking
-```bash
-npx tsc --noEmit     # Run TypeScript type checking
+npm run dev      # Start development server at http://localhost:3000
+npm run build    # Create optimized production build
+npm run start    # Start production server
+npm run lint     # Run ESLint with Next.js core-web-vitals rules
+npx tsc --noEmit # Run TypeScript type checking
 ```
 
 ## Code Style Guidelines
@@ -39,6 +30,15 @@ npx tsc --noEmit     # Run TypeScript type checking
 - Prefer `unknown` over `any`; use type guards when needed
 - Use `Readonly<T>` for immutable data structures
 - Use `React.ReactNode` for generic React children
+
+```typescript
+// Props typing pattern
+export default function Page({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) { ... }
+```
 
 ### Imports
 
@@ -64,13 +64,15 @@ import "./globals.css";                          // relative path
 - Add `"use client"` only when you need client-side interactivity (hooks, browser APIs)
 - Prefer function components with explicit prop types
 - Use named exports for page components, default exports for layouts
+- Use Lucide React for icons (`import { IconName } from "lucide-react"`)
 
 ```typescript
-// Server Component (default)
-export default function Page() { ... }
+"use client";  // Only when needed for interactivity
 
-// With named export
-export function ComponentName() { ... }
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+
+export function Header() { ... }
 ```
 
 ### Naming Conventions
@@ -87,12 +89,14 @@ export function ComponentName() { ... }
 - Use `dark:` prefix for dark mode variants
 - Use `inline` modifier for CSS variables (`@theme inline`)
 - Use arbitrary values sparingly (`[20px]`, `bg-[#123456]`)
+- Use `backdrop-blur-*` for glassmorphism effects
+- Use `zinc-*` palette for neutral colors
 
 ```css
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #09090b;
 }
 
 @theme inline {
@@ -100,16 +104,29 @@ export function ComponentName() { ... }
 }
 ```
 
+### Custom CSS Animations
+
+Available animation classes in `app/globals.css`:
+- `.animate-fade-up` - Fade in with upward translation
+- `.animate-fade-in` - Simple fade in
+- `.animate-slide-left` - Slide in from left
+- `.animate-float` - Gentle floating effect
+
+Delay utilities: `.delay-100` through `.delay-500`
+
+```tsx
+<div className="animate-fade-up delay-200">Content</div>
+```
+
 ### File Structure
 
 ```
 app/
-  layout.tsx      # Root layout with metadata
+  layout.tsx      # Root layout with metadata, fonts
   page.tsx        # Home page
-  globals.css     # Global styles and Tailwind config
+  globals.css     # Global styles, Tailwind config, animations
 components/      # Reusable React components
-lib/              # Utility functions and helpers
-public/           # Static assets
+public/           # Static assets (favicon.ico)
 ```
 
 ### Error Handling

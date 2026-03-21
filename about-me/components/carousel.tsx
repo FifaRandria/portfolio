@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 interface CarouselProps {
@@ -10,16 +10,35 @@ interface CarouselProps {
 
 export function Carousel({ images, alt }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [isVisible, images.length]);
 
   return (
-    <div className="relative aspect-[4/3] bg-zinc-800 rounded-lg overflow-hidden">
+    <div ref={containerRef} className="relative aspect-[4/3] bg-zinc-800 rounded-lg overflow-hidden">
       {images.map((src, index) => (
         <div
           key={src}
@@ -32,7 +51,8 @@ export function Carousel({ images, alt }: CarouselProps) {
             alt={`${alt} - Image ${index + 1}`}
             fill
             className="object-cover"
-            unoptimized
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="lazy"
           />
         </div>
       ))}
