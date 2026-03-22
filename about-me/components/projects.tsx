@@ -28,6 +28,15 @@ const projects = [
     github: "",
     live: "https://victimesduphotovoltaique.com/",
   },
+
+  {
+    title: "Gestion des carriers",
+    description: "une application développée en React et PHP lors de mon stage de L2 à la Caisse d’Épargne. Elle sert de référence interne pour l’entreprise afin d’optimiser le placement des employés dans les postes les plus adaptés à leurs compétences.",
+    tags: ["REACT", "bootstrap", "php", "MVC", "MYSQL"],
+    images: ["/img/gdc.PNG", "/img/gdc1.PNG", "/img/gdc2.PNG", "/img/gdc3.PNG", "/img/gdc4.PNG"],
+    github: "https://github.com/FifaRandria/Gestion_de_carrieres.git",
+    live: "",
+  },
   // {
   //   title: "Weather Dashboard",
   //   description: "Beautiful weather app with location-based forecasts and real-time updates.",
