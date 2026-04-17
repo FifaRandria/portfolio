@@ -132,7 +132,7 @@ export function Projects() {
             >
               <div className="relative h-44 shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent z-10" />
-                <Carousel images={project.images} alt={project.title} />
+                <Carousel images={project.images} alt={project.title}/>
                 <div className="absolute top-3 left-3 z-20">
                   <span className="px-2.5 py-1 text-xs font-medium bg-zinc-900/80 backdrop-blur-sm rounded-full text-zinc-300 border border-zinc-700/50">
                     {project.type}
