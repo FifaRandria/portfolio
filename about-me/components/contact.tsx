@@ -66,7 +66,7 @@ export function Contact() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 text-zinc-400 hover:text-indigo-400 hover:bg-zinc-800 rounded-full transition-all"
+              className="p-3 text-zinc-400 hover:text-indigo-400 hover:bg-zinc-800 bg-blue-800 rounded-full transition-all"
               aria-label={link.label}
             >
               <link.icon size={24} />
