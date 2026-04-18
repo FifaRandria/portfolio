@@ -54,11 +54,11 @@ export function About() {
                 Fifaliana Randria
               </h3>
               <p className="text-xl text-zinc-400 leading-relaxed">
-                Développeur <span className="text-indigo-400">Full-Stack</span> passionné par la création d&apos;applications web 
-                <span className="text-white">performantes</span> et<span className="text-white"> intuitives</span>.
+                Développeur <span className="text-indigo-400">Full-Stack </span> passionné par la création d&apos;applications web 
+                <span className="text-white"> performantes</span> et<span className="text-white"> intuitives</span>.
               </p>
               <p className="text-lg text-zinc-500 leading-relaxed">
-                Actuellement en spécialisation <span className="text-purple-400">Algorithmes | Data | IA & Mobile</span> à 42 Antananarivo. 
+                Actuellement en spécialisation <span className="text-purple-400">Algorithmes & Data & IA | Web & Mobile </span> <a href="https://42antananarivo.mg/" target="_blank" rel="noopener noreferrer" className="text-white hover:underline"> à 42 Antananarivo.</a>. 
                 J&apos;aime relever des défis techniques et transformer des idées en solutions concrètes.
               </p>
             </div>
@@ -91,6 +91,10 @@ export function About() {
                   <span className="font-medium text-white">Ma philosophie</span>
                 </div>
                 <ul className="space-y-1.5 text-sm text-zinc-500">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-purple-500 rounded-full" />
+                    <span className="text-zinc-400"> <a href="https://lia5-v01.vercel.app/explain?name=a%20toi&level=debutant" className=" text-blue-400">Carpe diem</a></span>
+                  </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1 h-1 bg-purple-500 rounded-full" />
                     <span className="text-zinc-400">Code propre et maintenable</span>

@@ -2,7 +2,7 @@ export function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center px-6 pt-20">
       <div className="max-w-2xl text-center">
-        <p className="text-sm uppercase tracking-widest text-zinc-500 mb-4 animate-fade-up">
+        <p className=" text-sm uppercase tracking-widest text-zinc-500 mb-4 animate-fade-up">
           Full-Stack Developer
         </p>
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6 animate-fade-up delay-100">

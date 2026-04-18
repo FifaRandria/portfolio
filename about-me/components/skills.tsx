@@ -69,7 +69,7 @@ export function Skills() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Mes <span className="text-purple-400">compétences</span>
+            Compétences <span className="text-purple-400">& Outils</span>
           </h2>
           <p className="text-lg text-zinc-400 max-w-xl mx-auto">
             Les technologies que j&apos;utilise pour créer des expériencesWeb modernes et performantes.
