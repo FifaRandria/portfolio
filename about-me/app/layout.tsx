@@ -71,7 +71,7 @@ export const viewport: Viewport = {
   themeColor: "#09090b",
 };
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gaId = "G-QVCSTFRY73";
 
 export default function RootLayout({
   children,
