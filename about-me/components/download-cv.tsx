@@ -16,7 +16,7 @@ export function DownloadCV() {
   return (
     <button
       onClick={handleDownload}
-      className="fixed bottom-15 right-15 z-50 p-4 bg-indigo-500 hover:bg-indigo-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all animate-bounce-subtle cursor-pointer"
+      className="fixed bottom-15 right-10 z-50 p-4 bg-indigo-500 hover:bg-indigo-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all animate-bounce cursor-pointer"
       aria-label="Télécharger mon CV"
     >
       <Download className="w-9 h-9" />

@@ -6,8 +6,8 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { href: "#about", label: "À propos" },
   { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projets" },
   { href: "#experience", label: "Expérience" },
+  { href: "#projects", label: "Projets" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -37,7 +37,7 @@ export function Header() {
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="text-lg font-semibold text-white">
-          Fifa
+          {"<"}Fifa {"/>"}
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
