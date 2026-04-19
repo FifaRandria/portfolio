@@ -11,15 +11,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fifarandria.dev"),
-  title: "Fifaliana Randria | Développeuse Full-Stack",
+  title: "Fifaliana Randria | Développeur Full-Stack",
   description:
-    "Développeuse Full-Stack spécialisée en React, Next.js, TypeScript. Je crée des applications web accessibles, performantes et élégantes.",
+    "Développeur Full-Stack spécialisée en React, Next.js, TypeScript. Je crée des applications web accessibles, performantes et élégantes.",
   keywords: [
-    "Développeuse Full-Stack",
-    "Développeuse React",
+    "Développeur Full-Stack",
+    "Développeur React",
     "Next.js",
     "TypeScript",
-    "Développeuse Web",
+    "Développeur Web",
     "Portfolio",
   ],
   authors: [{ name: "Fifaliana Randria", url: "https://fifarandria.dev" }],
@@ -29,23 +29,23 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://fifarandria.dev",
     siteName: "Fifaliana Randria Portfolio",
-    title: "Fifaliana Randria | Développeuse Full-Stack",
+    title: "Fifaliana Randria | Développeur Full-Stack",
     description:
-      "Développeuse Full-Stack spécialisée en React, Next.js, TypeScript.",
+      "Développeur Full-Stack spécialisée en React, Next.js, TypeScript.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Fifaliana Randria - Développeuse Full-Stack",
+        alt: "Fifaliana Randria - Développeur Full-Stack",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fifaliana Randria | Développeuse Full-Stack",
+    title: "Fifaliana Randria | Développeur Full-Stack",
     description:
-      "Développeuse Full-Stack spécialisée en React, Next.js, TypeScript.",
+      "Développeur Full-Stack spécialisée en React, Next.js, TypeScript.",
     images: ["/og-image.png"],
     creator: "@FifaRandria",
   },
@@ -89,9 +89,9 @@ export default function RootLayout({
               "@type": "Person",
               name: "Fifaliana Randria",
               url: "https://fifarandria.dev",
-              jobTitle: "Développeuse Full-Stack",
+              jobTitle: "Développeur Full-Stack",
               description:
-                "Développeuse Full-Stack spécialisée en React, Next.js, TypeScript",
+                "Développeur Full-Stack spécialisée en React, Next.js, TypeScript",
               sameAs: [
                 "https://github.com/FifaRandria",
                 "https://linkedin.com/in/fifarandria",
