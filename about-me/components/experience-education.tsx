@@ -26,7 +26,7 @@ const education = [
     degree: "Spécialisation - Algorithmes | Data | IA & Mobile",
     school: "42 Antananarivo",
     period: "2025 - En cours",
-    description: "Parcours avancé en algorithmie, science des données, intelligence artificielle et développement mobile.",
+    description: "Parcours avancé en algorithmie, science des données, intelligence artificielle et développement web & mobile.",
     icon: Cpu,
     highlight: true,
   },
@@ -34,7 +34,7 @@ const education = [
     degree: "Tronc Commun",
     school: "42 Antananarivo",
     period: "2024 - 2025",
-    description: "Fondamentaux: C, Python, Go, SQL, Docker,Linux, Git. Méthode peer-learning et projets collaboratifs.",
+    description: "Fondamentaux: C, C++, Docker, Linux, Git. Méthode peer-learning et projets collaboratifs.",
     icon: Code2,
   },
   {
